@@ -2,14 +2,14 @@
   <v-container id="about">
     <NavBar/>
     <v-row class="justify-center mt-16">
-      <v-col cols="5" class="">
+      <v-col cols="12" sm="12" md="5" lg="5" xl="5" class="">
         <v-row class="justify-center">
           <v-col cols="8" style="background-color: #9ccbcb">
             <v-img src="omz_pp.jpeg" class="rounded-circle" style="border: 3px solid black"/>
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="7">
+      <v-col cols="11" sm="11" md="7" lg="7" xl="7">
         <h1>
           Hello !
         </h1>
@@ -35,9 +35,7 @@
       </v-col>
     </v-row>
     <v-row class="mb-5">
-      <v-col cols="5">
-      </v-col>
-      <v-col cols="2">
+      <v-col cols="3" sm="4" md="7" lg="1" xl="1">
         <v-btn tile dark large style="font-size: large" class="mt-13">
           <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
           <v-icon class="ml-3">
@@ -45,7 +43,7 @@
           </v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="1" class="mr-16">
+      <v-col cols="3" sm="4" md="7" lg="1" xl="1" class="mr-16">
         <v-btn tile dark large style="font-size: large" class="mt-13" @click="goToContact">
           Let's chat
         </v-btn>
