@@ -34,8 +34,27 @@
         </div>
       </v-col>
     </v-row>
-    <v-row class="mb-5">
-      <v-col cols="3" sm="4" md="7" lg="1" xl="1">
+    <v-row v-if="!$vuetify.breakpoint.smAndDown" class="mt-3 mb-16">
+      <v-col cols="5"></v-col>
+      <v-col cols="6" sm="4" md="3" lg="2" xl="2">
+        <v-btn tile dark large style="font-size: large">
+          <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
+          <v-icon class="ml-3">
+            mdi-download
+          </v-icon>
+        </v-btn>
+      </v-col>
+      <v-col cols="6" sm="4" md="3" lg="2" xl="2">
+        <v-btn tile dark large style="font-size: large" @click="goToContact">
+          Let's chat
+        </v-btn>
+      </v-col>
+      <v-col cols="1" class="moving-arrow mt-2">
+        <v-icon large>mdi-arrow-left</v-icon>
+      </v-col>
+    </v-row>
+    <v-row v-if="$vuetify.breakpoint.smAndDown" class="mb-16 ml-3">
+      <v-col cols="7" sm="4" md="7" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large" class="mt-13">
           <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
           <v-icon class="ml-3">
@@ -43,12 +62,12 @@
           </v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="3" sm="4" md="7" lg="1" xl="1" class="mr-16">
+      <v-col cols="6" sm="4" md="7" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large" class="mt-13" @click="goToContact">
           Let's chat
         </v-btn>
       </v-col>
-      <v-col cols="1" class="moving-arrow mt-15 text-left">
+      <v-col cols="1" class="moving-arrow mt-15">
         <v-icon large>mdi-arrow-left</v-icon>
       </v-col>
     </v-row>

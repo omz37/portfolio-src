@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar id="nav" app color="#111111" dark class="px-8" style="border-bottom: 1px solid #00c2cb">
+  <v-app-bar id="nav" app color="#111111" dark style="border-bottom: 1px solid #00c2cb">
     <v-row v-if="!$vuetify.breakpoint.smAndDown">
       <v-img src="logo.png" contain max-width="80" class="clickable-text" @click="goToPage('home')"/>
 
@@ -16,16 +16,16 @@
 
 <!--    MOBILE VERSION-->
     <v-row v-else>
-      <v-col cols="2">
-        <v-img src="logo.png" contain class="clickable-text mt-1" @click="goToPage('home')"/>
+      <v-col cols="3" class="">
+        <v-img src="logo.png" contain class="clickable-text mt-2" max-height="35" @click="goToPage('home')"/>
       </v-col>
-      <v-col cols="3" class="mx-1">
+      <v-col cols="3" class="mt-1">
         <v-btn :style="currentPath === 'projects' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('projects')">Projects</v-btn>
       </v-col>
-      <v-col cols="3" class="mx-1">
+      <v-col cols="2" class="mt-1">
         <v-btn :style="currentPath === 'about' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('about')">About</v-btn>
       </v-col>
-      <v-col cols="3" class="mx-1">
+      <v-col cols="2" class="mt-1">
         <v-btn :style="currentPath === 'contact' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('contact')">Contact</v-btn>
       </v-col>
     </v-row>

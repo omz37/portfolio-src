@@ -9,7 +9,7 @@
           <v-col cols="12" xl="11" lg="10" md="10" sm="12">
             <div style="font-size: 50px">Hello, I'm Omz Marlin - a Web Developer based in France</div>
           </v-col>
-          <v-col cols="3" xl="2" lg="2" md="2" sm="3" class="mt-6">
+          <v-col cols="3" xl="1" lg="2" md="2" sm="3" class="mt-6">
             <v-row class="justify-end mr-1" v-if="!$vuetify.breakpoint.smAndDown">
               <v-btn tile dark large style="font-size: large" @click="goToPage('about')">About me</v-btn>
             </v-row>

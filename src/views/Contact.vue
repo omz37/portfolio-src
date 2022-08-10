@@ -8,32 +8,55 @@
             <h1 style="color: #00c2cb" class="mt-7"> Contact </h1>
           </v-row>
           <v-row class="mt-16 justify-start">
-            <pre class="white--text" style="font-size: 20px">If you have a problem to solve or a project you need help building, please contact me either <br>on my email: <a href="mailto:omarmarlin@gmail.com" class="white--text">omarmarlin@gmail.com </a>or on my LinkedIn and Malt accounts !</pre>
+            <div class="white--text" style="font-size: 20px">If you have a problem to solve or a project you need help building, please contact me either on my email: <a href="mailto:omarmarlin@gmail.com" class="white--text">omarmarlin@gmail.com </a>or on my LinkedIn and Malt accounts!</div>
           </v-row>
-          <v-row class="justify-center mt-16">
-            <v-col cols="1" class="mr-3">
-              <v-btn href="https://www.linkedin.com/in/jules-omar-marlin/" style="background-color: #00c2cb">
+          <v-row class="mt-16 mb-4" v-if="!$vuetify.breakpoint.smAndDown">
+            <v-col cols="1" class="mr-2">
+              <v-btn href="https://www.linkedin.com/in/jules-omar-marlin/" target="_blank" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-linkedin
                 </v-icon>
               </v-btn>
             </v-col>
-            <v-col cols="1" class="mr-3">
+            <v-col cols="1" class="mx-2">
               <v-btn href="mailto:omarmarlin@gmail.com" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-gmail
                 </v-icon>
               </v-btn>
             </v-col>
-            <v-col cols="1" class="mb-5">
-              <v-btn href="https://www.malt.fr/profile/julesomarmarlin1" style="background-color: #00c2cb">
+            <v-col cols="1" class="mx-2">
+              <v-btn href="https://www.malt.fr/profile/julesomarmarlin1" target="_blank" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-alpha-m-box
                 </v-icon>
               </v-btn>
             </v-col>
           </v-row>
-          <v-row class="mt-10">
+          <v-row class="mt-16 mb-4" v-if="$vuetify.breakpoint.smAndDown">
+            <v-col cols="2" class="mr-3">
+              <v-btn href="https://www.linkedin.com/in/jules-omar-marlin/" target="_blank" style="background-color: #00c2cb">
+                <v-icon>
+                  mdi-linkedin
+                </v-icon>
+              </v-btn>
+            </v-col>
+            <v-col cols="2" class="mx-3">
+              <v-btn href="mailto:omarmarlin@gmail.com" style="background-color: #00c2cb">
+                <v-icon>
+                  mdi-gmail
+                </v-icon>
+              </v-btn>
+            </v-col>
+            <v-col cols="2" class="mx-3">
+              <v-btn href="https://www.malt.fr/profile/julesomarmarlin1" target="_blank" style="background-color: #00c2cb">
+                <v-icon>
+                  mdi-alpha-m-box
+                </v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-row class="mt-13">
             <v-img src="contact.jpg"/>
           </v-row>
         </v-card>
