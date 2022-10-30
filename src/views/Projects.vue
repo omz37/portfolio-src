@@ -13,6 +13,7 @@
                     <v-icon>mdi-arrow-left</v-icon>
                   </v-btn>
                 </v-col>
+<!--                TODO: BRo vasy en vrai t pas chaud ya tous les projets a la suite sur la page projets et selon le clic ca mets ton curseur au bon endroit-->
                 <v-col cols="12" xl="10" lg="10" md="8" sm="12">
                   <v-img :src="project.photos[project.counter]"/>
                 </v-col>
