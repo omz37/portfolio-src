@@ -25,15 +25,14 @@
               cols="12" sm="12" md="6" lg="6" xl="6"
               class="mb-5 clickable-text"
               v-for="project in projects"
-              :key="project"
+              :key="project.id"
               @mouseover="project.isHovered = true"
               @mouseleave="project.isHovered = false"
           >
-<!--            <h1 v-if="project.isHovered">{{project.title}}</h1>-->
-            <v-card elevation="8" style="background-color: black">
+            <v-card elevation="8" style="background-color: black" @click="goToProject(project.id)">
               <v-img :src="project.src" :class="{ active: project.isHovered }"></v-img>
             </v-card>
-            <h1 v-if="project.isHovered" style="left: 250px; bottom: 150px; position:relative; margin-bottom: -48px" class="white--text">{{project.title}}</h1>
+            <h1 v-if="project.isHovered" style="left: 50px; bottom: 150px; position:relative; margin-bottom: -48px" class="white--text">{{project.title}}</h1>
           </v-col>
         </v-row>
 
@@ -66,9 +65,10 @@ export default {
   data() {
     return {
       projects: [
-        {title: 'Area', src: '2.png', isHovered: false},
-        {title: 'Swity', src: '3.png', isHovered: false},
-        {title: 'SalahSalah', src: '4.png', isHovered: false},
+        {title: 'Area', src: 'project_area.png', isHovered: false, id: 0},
+        {title: 'Pyp', src: 'project_pyp.png', isHovered: false, id: 1},
+        {title: 'ChambreNoire', src: 'project_cn.png', isHovered: false, id: 2},
+        {title: 'Swity', src: 'project_swity.png', isHovered: false, id: 3}
       ],
       projectCardStyle: ''
     }
@@ -81,6 +81,10 @@ export default {
     goToPage(page) {
       localStorage.setItem('currentPath', page)
       this.$router.push(page)
+    },
+    goToProject(id) {
+      localStorage.setItem('currentPath', 'projects')
+      this.$router.push({name: 'projects', params: {id: id}, props: {id: id}})
     }
   },
   created() {
