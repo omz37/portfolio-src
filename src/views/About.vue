@@ -15,21 +15,22 @@
         </h1>
         <div class="mt-5" style="font-size: large">
           <div class="mb-4">
-            I’m Jules Omar, a web developer/creator on a mission to translate complex projects into beautiful and responsive websites. <br>
+            I’m Jules Omar, a web developer/creator on a mission to translate complex projects into beautiful, practical and responsive websites. <br>
           </div>
           <div class="mb-4">
-            I’ve been lucky enough to work on a wide range of projects in the past, from independent websites and apps, to more complex features for enterprise software solutions. <br>
+            I’ve been fortunate enough to be exposed to a wide range of projects in the past. From independent websites to apps and more complex features for enterprise software solutions. <br>
           </div>
           <div class="mb-4">
-            I have worked in-person for almost all my projects, however having to move a lot during my studies and internships I have decided to work fully remote for now ! <br>
+            Though I have worked in-person for most of my projects, I am choosing to work remotely temporarily as I'm currently on a mobility programme in Kuala Lumpur under University of Kuala Lumpur (UniKL) for my postgraduate studies in Software Engineering. <br>
           </div>
           <div class="mb-4">
-            I believe that website creation is at the perfect intersection of logical analysis and creativity - while there is so much room for creating and giving solutions, rest assured that I will do everything to match exactly the vision you have of you project.<br>
+            I believe that website creation is the perfect intersection of logical analysis and creativity. While through analysis is where there's room for innovating and providing solutions, the creative aspect of website development is where we can work together to accurately execute the vision of the project.<br>
           </div>
           <div class="mb-4">
-            These days, I am currently studying at the University of Kuala Lumpur to improve my skills in UX/UI, project management and business planning. <br>
-
-            Outside of programming, I’m a big fan of history, science and martial arts. If you’d like to work together, I’d love to hear from you ! <br>
+            I am constantly looking to upskill myself outside of class hours. Hence, I am taking a Coursera course in project management that's certified by Google. This course complements my degree in Software Engineering by equipping me with relevant skills such as team management, communication and planning. <br>
+          </div>
+          <div>
+            Let's get in touch ! <br>
           </div>
         </div>
       </v-col>

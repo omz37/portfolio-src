@@ -1,14 +1,19 @@
 <template>
   <v-container id="contact" style="background-color: black; width: 100%; height: 100%">
     <NavBar/>
-    <v-row class="justify-center mt-10">
+    <v-row class="justify-center mt-10 mb-16">
       <v-col cols="8">
         <v-card style="background-color: black">
           <v-row class="justify-start">
             <h1 style="color: #00c2cb" class="mt-7"> Contact </h1>
           </v-row>
           <v-row class="mt-16 justify-start">
-            <div class="white--text" style="font-size: 20px">If you have a problem to solve or a project you need help building, please contact me either on my email: <a href="mailto:omarmarlin@gmail.com" class="white--text">omarmarlin@gmail.com </a>or on my LinkedIn and Malt accounts!</div>
+            <div class="white--text" style="font-size: 20px">I am open to discussing any projects you have in mind. Feel free to reach out to me either via email at <a href="mailto:omarmarlin@gmail.com" class="white--text">omarmarlin@gmail.com
+            </a>or connect with me on LinkedIn! <br>
+            </div>
+            <div  class="white--text mt-3" style="font-size: 20px">
+              Alternatively, if you have a project in mind, you may propose it on my Malt account.
+            </div>
           </v-row>
           <v-row class="mt-16 mb-4" v-if="!$vuetify.breakpoint.smAndDown">
             <v-col cols="1" class="mr-2">

@@ -8,9 +8,11 @@ import About from './views/About'
 import Contact from './views/Contact'
 import Projects from './views/Projects'
 import VAnimateCss from 'v-animate-css';
+import VueScrollTo from 'vue-scrollto'
 
 Vue.use(VAnimateCss)
 Vue.use(VueRouter)
+Vue.use(VueScrollTo)
 
 const router = new VueRouter({
   base: process.env.BASE_URL,
