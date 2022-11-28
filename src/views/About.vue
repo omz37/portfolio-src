@@ -40,9 +40,6 @@
       <v-col cols="6" sm="4" md="3" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large">
           <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
-          <v-icon class="ml-3">
-            mdi-download
-          </v-icon>
         </v-btn>
       </v-col>
       <v-col cols="6" sm="4" md="3" lg="2" xl="2">

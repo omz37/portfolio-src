@@ -28,8 +28,9 @@
               :key="project.id"
               @mouseover="project.isHovered = true"
               @mouseleave="project.isHovered = false"
+              @click="goToProject(project.id.toString())"
           >
-            <v-card elevation="8" style="background-color: black" @click="goToProject(project.id)">
+            <v-card elevation="8" style="background-color: black">
               <v-img :src="project.src" :class="{ active: project.isHovered }"></v-img>
             </v-card>
             <h1 v-if="project.isHovered" style="left: 50px; bottom: 150px; position:relative; margin-bottom: -48px" class="white--text">{{project.title}}</h1>
@@ -84,14 +85,14 @@ export default {
     },
     goToProject(id) {
       localStorage.setItem('currentPath', 'projects')
-      this.$router.push({name: 'projects', params: {id: id}, props: {id: id}})
+      this.$router.push({name: 'projects', params: {number: id}})
     }
   },
   created() {
     if (!localStorage.getItem('currentPath')) {
       localStorage.setItem('currentPath', 'home')
     }
-  }
+  },
 }
 </script>
 <style scoped>

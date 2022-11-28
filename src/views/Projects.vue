@@ -2,8 +2,8 @@
   <v-container id="project">
     <NavBar/>
     <div class="mt-6 mb-12 justify-center" v-for="project in projects" :key="project.id">
-      <div>
-        <v-row class="ml-1" style="font-size: xxx-large" :id="project.id.toString()">
+      <div :id="project.id">
+        <v-row class="ml-1" style="font-size: xxx-large">
           {{project.title}}
         </v-row>
         <v-row class=" mt-6">
@@ -62,6 +62,7 @@ import Footer from "@/components/Footer";
 
 export default {
   name: "Projects",
+  props: ['number'],
   data() {
     return {
       randProject: 0,
@@ -98,7 +99,8 @@ export default {
           counter: 0},
         {
           title: 'Swity',
-          id: 3, goal: 'Swity is a work-in-progress mobile application I am currently working on with colleagues from University, its part of the Epitech Innovative Projects. ' +
+          id: 3,
+          goal: 'Swity is a work-in-progress mobile application I am currently working on with colleagues from University, its part of the Epitech Innovative Projects. ' +
               'The goal of this app is to help young people suffering from Diabetes to manage and handle easily their disease and live a normal life. The launch is expected for 2023.',
           techno: 'Android Studio with Java Kotlin',
           photos: ['project_swity.png'],
@@ -112,9 +114,14 @@ export default {
     Footer,
   },
   created() {
-    let element = document.getElementById("2");
-    console.log(element)
-    element.scrollIntoView({behavior: "smooth", block: "end"});
+
+  },
+  mounted() {
+    if (this.$props.number) {
+      let element = document.getElementById(this.$props.number)
+      if (element)
+        element.scrollIntoView({behavior: "auto", block: "center"});
+    }
   },
   methods: {
   }
