@@ -7,13 +7,13 @@
       <div class="mb-10 mx-16">
         <v-row class="mt-16">
           <v-col cols="12" xl="11" lg="10" md="10" sm="12">
-            <div style="font-size: 50px">Hello, I'm Omz Marlin - a Web Developer based in France</div>
+            <div style="font-size: 38px">Hello, I'm Omz Marlin - a Web Developer based in France</div>
           </v-col>
           <v-col cols="3" xl="1" lg="2" md="2" sm="3" class="mt-6">
-            <v-row class="justify-end mr-1" v-if="!$vuetify.breakpoint.smAndDown">
-              <v-btn tile dark large style="font-size: large" @click="goToPage('about')">About me</v-btn>
+            <v-row class="justify-end mr-1" v-if="!$vuetify.breakpoint.smAndDown" >
+              <v-btn tile dark large style="font-size: large" @click="goToPage('about')" >About me</v-btn>
             </v-row>
-            <v-row v-else class="ml-1">
+            <v-row v-else class="ml-1 text-center">
               <v-btn tile dark large style="font-size: large" @click="goToPage('about')">About me</v-btn>
             </v-row>
           </v-col>

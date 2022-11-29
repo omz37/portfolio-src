@@ -2,10 +2,12 @@
   <v-container id="about">
     <NavBar/>
     <v-row class="justify-center mt-16">
-      <v-col cols="12" sm="12" md="5" lg="5" xl="5" class="">
+      <v-col cols="12" sm="12" md="5" lg="5" xl="5">
         <v-row class="justify-center">
           <v-col cols="8" style="background-color: #9ccbcb">
-            <v-img src="omz_pp.jpeg" class="rounded-circle" style="border: 3px solid black"/>
+            <v-card class="rounded-circle" elevation="5">
+              <v-img src="omz_pp.jpeg" class="rounded-circle" style="border: 1px solid black"/>
+            </v-card>
           </v-col>
         </v-row>
       </v-col>
