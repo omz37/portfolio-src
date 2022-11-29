@@ -39,21 +39,21 @@
             </v-col>
           </v-row>
           <v-row class="mt-16 mb-4" v-if="$vuetify.breakpoint.smAndDown">
-            <v-col cols="2" class="mr-3">
+            <v-col cols="4">
               <v-btn href="https://www.linkedin.com/in/jules-omar-marlin/" target="_blank" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-linkedin
                 </v-icon>
               </v-btn>
             </v-col>
-            <v-col cols="2" class="mx-3">
+            <v-col cols="4">
               <v-btn href="mailto:omarmarlin@gmail.com" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-gmail
                 </v-icon>
               </v-btn>
             </v-col>
-            <v-col cols="2" class="mx-3">
+            <v-col cols="4">
               <v-btn href="https://www.malt.fr/profile/julesomarmarlin1" target="_blank" style="background-color: #00c2cb">
                 <v-icon>
                   mdi-alpha-m-box
