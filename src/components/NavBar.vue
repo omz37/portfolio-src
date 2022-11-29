@@ -16,47 +16,57 @@
 
 <!--    MOBILE VERSION-->
     <v-row v-else>
+      <v-col>
       <div>
-        <v-row class="">
-          <v-col cols="1"></v-col>
-          <v-col cols="4">
+        <v-row>
+          <v-col cols="3" class="mt-2">
             <v-img src="logo.png" contain class="clickable-text" max-height="35" @click="goToPage('home')"/>
+          </v-col>
+          <v-col cols="4">
+            <h1 class="clickable-text" @click="goToPage('home')">OMZ</h1>
           </v-col>
           <v-spacer></v-spacer>
           <v-col cols="2">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-navigation-drawer v-model="drawer" app absolute right height="180" width="200"  style="background-color: black; border: 1px solid #9ccbcb">
-              <v-list flat dense nav class="py-1">
-                <v-list-item-group class="justify-center text-center">
-                  <v-row class="justify-center text-center">
-                    <v-col cols="5">
-                      <v-list-item @click="goToPage('home'); drawer = false" class="text-center" :style="currentPath === 'home' ? 'color: #00c2cb' : 'color: #B5DACC'"> Home </v-list-item>
-                    </v-col>
-                  </v-row>
-                  <v-divider class="justify-center mr-1" style="background-color: #9ccbcb"></v-divider>
-                  <v-row class="justify-center text-center">
-                    <v-col cols="5">
-                      <v-list-item @click="goToPage('projects'); drawer = false" class="text-center" :style="currentPath === 'projects' ? 'color: #00c2cb' : 'color: #B5DACC'"> Projects </v-list-item>
-                    </v-col>
-                  </v-row>
-                  <v-divider class="justify-center mr-1" style="background-color: #9ccbcb"></v-divider>
-                  <v-row class="justify-center text-center">
-                    <v-col cols="5">
-                      <v-list-item @click="goToPage('about'); drawer = false" class="text-center" :style="currentPath === 'about' ? 'color: #00c2cb' : 'color: #B5DACC'"> About </v-list-item>
-                    </v-col>
-                  </v-row>
-                  <v-divider class="justify-center mr-1" style="background-color: #9ccbcb"></v-divider>
-                  <v-row class="justify-center text-center">
-                    <v-col cols="5">
-                      <v-list-item @click="goToPage('contact'); drawer = false" class="text-center" :style="currentPath === 'contact' ? 'color: #00c2cb' : 'color: #B5DACC'"> Contact </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-list-item-group>
-              </v-list>
-            </v-navigation-drawer>
           </v-col>
         </v-row>
+        <v-navigation-drawer
+            v-model="drawer"
+            absolute
+            app
+            right
+            style="background-color: black"
+        >
+          <v-list
+              nav
+              dense
+          >
+            <v-list-item-group
+                v-model="group"
+            >
+              <v-list-item @click="goToPage('home'); drawer = false" class="text-center" :style="currentPath === 'home' ? 'color: black; background-color: #9ccbcb' : 'color: white'">
+                <v-list-item-title style="font-size: large"> Home </v-list-item-title>
+              </v-list-item>
+
+              <v-divider></v-divider>
+              <v-list-item @click="goToPage('projects'); drawer = false" class="text-center" :style="currentPath === 'projects' ? 'color: black; background-color: #9ccbcb' : 'color:  white'">
+                <v-list-item-title style="font-size: large"> Projects </v-list-item-title>
+              </v-list-item>
+
+              <v-divider></v-divider>
+              <v-list-item @click="goToPage('about'); drawer = false" class="text-center" :style="currentPath === 'about' ? 'color: black; background-color: #9ccbcb' : 'color:  white'">
+                <v-list-item-title style="font-size: large"> About </v-list-item-title>
+              </v-list-item>
+
+              <v-divider></v-divider>
+              <v-list-item @click="goToPage('contact'); drawer = false" class="text-center" :style="currentPath === 'contact' ? 'color: black; background-color: #9ccbcb' : 'color: white'">
+                <v-list-item-title style="font-size: large"> Contact </v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-navigation-drawer>
       </div>
+      </v-col>
     </v-row>
   </v-app-bar>
 </template>
@@ -66,8 +76,14 @@ export default {
   data() {
     return  {
       currentPath: 'home',
-      drawer: false
+      drawer: false,
+      group: null,
     }
+  },
+  watch: {
+    group() {
+      this.drawer = false
+    },
   },
   methods: {
     goToPage(page) {

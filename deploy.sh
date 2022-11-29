@@ -5,6 +5,7 @@ npm run build
 rm -rf ../portfolio-build/*
 #cut and paste dist to build repo
 cp -rf dist/* ../portfolio-build/
+cp netlify.toml ../portfolio-build/
 rm -rf dist/
 cd ../portfolio-build/
 git add .
