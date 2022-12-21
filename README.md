@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+LOCALIZATION
+
+{$t('titleText.rightNavTheme')}} inside html part
+and

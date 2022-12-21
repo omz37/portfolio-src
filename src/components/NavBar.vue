@@ -11,6 +11,36 @@
       <v-btn :style="currentPath === 'projects' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('projects')">Projects</v-btn>
       <v-btn :style="currentPath === 'about' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('about')">About</v-btn>
       <v-btn :style="currentPath === 'contact' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('contact')">Contact</v-btn>
+      <v-menu open-on-hover offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+              dark
+              v-bind="attrs"
+              v-on="on"
+              style="color: #00c2cb"
+          >
+
+<!--            TODO: Add localizations for all strings -->
+
+            <v-icon>mdi-web</v-icon>
+             {{lang}}
+          </v-btn>
+        </template>
+        <v-list style="background-color: #111111">
+          <v-list-item
+              v-for="(item, index) in languages"
+              :key="index"
+              style="cursor: pointer" :style="item.isHovered ? 'background-color: #9ccbcb' : ''"
+              @mouseover="item.isHovered = true" @mouseleave="item.isHovered = false"
+          >
+            <v-list-item-title
+                @click="changeLanguage(item.title)" style="color: white">
+                {{ item.title }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-btn x-small style="background-color: #111111; cursor: default"></v-btn>
 
     </v-row>
 
@@ -63,6 +93,32 @@
                 <v-list-item-title style="font-size: large"> Contact </v-list-item-title>
               </v-list-item>
             </v-list-item-group>
+
+            <div style="background-color: #9ccbcb; height: 5px" class="my-5"></div>
+            <v-list-item>
+              <v-spacer></v-spacer>
+              <v-btn
+                  dark
+                  :style="lang === 'EN' ? 'background-color: #9ccbcb' : 'background-color: #111111'"
+                  @click="changeLanguage('EN')"
+              >
+                <v-icon>mdi-web</v-icon>
+                EN
+              </v-btn>
+              <v-spacer></v-spacer>
+              <v-btn
+                  dark
+                  :style="lang === 'FR' ? 'background-color: #9ccbcb' : 'background-color: #111111'"
+                  @click="changeLanguage('FR')"
+              >
+                <v-icon>mdi-web</v-icon>
+                FR
+              </v-btn>
+              <v-spacer></v-spacer>
+
+            </v-list-item>
+
+
           </v-list>
         </v-navigation-drawer>
       </div>
@@ -74,25 +130,42 @@
 <script>
 export default {
   data() {
-    return  {
+    return {
       currentPath: 'home',
       drawer: false,
       group: null,
+      lang: '',
+      languages: [
+        {title: 'FR', isHovered: false},
+        {title: 'EN', isHovered: false},
+      ],
     }
   },
+
   watch: {
     group() {
       this.drawer = false
     },
   },
+
   methods: {
     goToPage(page) {
       localStorage.setItem('currentPath', page)
       this.$router.push(page)
     },
+    changeLanguage(lang) {
+      localStorage.setItem('lang', lang)
+      this.lang = lang
+      this.$router.go(0)
+    },
   },
+
   mounted() {
     this.currentPath = localStorage.getItem('currentPath')
+    this.lang = localStorage.getItem('lang')
+    if (this.lang === '') {
+      this.lang = 'EN'
+    }
   }
 };
 </script>
