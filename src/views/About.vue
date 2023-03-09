@@ -17,22 +17,22 @@
         </h1>
         <div class="mt-5" style="font-size: large">
           <div class="mb-4">
-            I’m Jules Omar, a web developer/creator on a mission to translate complex projects into beautiful, practical and responsive websites. <br>
+            {{$t('message.bio1')}} <br>
           </div>
           <div class="mb-4">
-            I’ve been fortunate enough to be exposed to a wide range of projects in the past. From independent websites to apps and more complex features for enterprise software solutions. <br>
+            {{$t('message.bio2')}} <br>
           </div>
           <div class="mb-4">
-            Though I have worked in-person for most of my projects, I am choosing to work remotely temporarily as I'm currently on a mobility programme in Kuala Lumpur under University of Kuala Lumpur (UniKL) for my postgraduate studies in Software Engineering. <br>
+            {{$t('message.bio3')}} <br>
           </div>
           <div class="mb-4">
-            I believe that website creation is the perfect intersection of logical analysis and creativity. While through analysis is where there's room for innovating and providing solutions, the creative aspect of website development is where we can work together to accurately execute the vision of the project.<br>
+            {{$t('message.bio4')}} <br>
           </div>
           <div class="mb-4">
-            I am constantly looking to upskill myself outside of class hours. Hence, I am taking a Coursera course in project management that's certified by Google. This course complements my degree in Software Engineering by equipping me with relevant skills such as team management, communication and planning. <br>
+            {{$t('message.bio5')}} <br>
           </div>
           <div>
-            Let's get in touch ! <br>
+            {{$t('message.bio6')}} <br>
           </div>
         </div>
       </v-col>
@@ -41,12 +41,12 @@
       <v-col cols="5"></v-col>
       <v-col cols="6" sm="4" md="3" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large">
-          <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
+          <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">{{ $t('button.cv') }}</a>
         </v-btn>
       </v-col>
       <v-col cols="6" sm="4" md="3" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large" @click="goToContact">
-          Let's chat
+          {{ $t('button.chat') }}
         </v-btn>
       </v-col>
       <v-col cols="1" class="moving-arrow mt-2">
@@ -56,12 +56,12 @@
     <v-row v-if="$vuetify.breakpoint.smAndDown" class="mb-16 ml-3">
       <v-col cols="7" sm="4" md="7" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large" class="mt-13">
-          <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">My C.V</a>
+          <a href="cv-marlin-english.pdf" target="_blank" style="font-size: large; text-decoration: none; color: white">{{ $t('button.cv') }}</a>
         </v-btn>
       </v-col>
       <v-col cols="6" sm="4" md="7" lg="2" xl="2">
         <v-btn tile dark large style="font-size: large" class="mt-13" @click="goToContact">
-          Let's chat
+          {{ $t('button.chat') }}
         </v-btn>
       </v-col>
       <v-col cols="1" class="moving-arrow mt-15">

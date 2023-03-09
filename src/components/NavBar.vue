@@ -7,10 +7,10 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn :style="currentPath === 'home' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('home')">Home</v-btn>
-      <v-btn :style="currentPath === 'projects' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('projects')">Projects</v-btn>
-      <v-btn :style="currentPath === 'about' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('about')">About</v-btn>
-      <v-btn :style="currentPath === 'contact' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('contact')">Contact</v-btn>
+      <v-btn :style="currentPath === 'home' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('home')">{{ $t('nav.home') }}</v-btn>
+      <v-btn :style="currentPath === 'projects' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('projects')">{{ $t('nav.projects') }}</v-btn>
+      <v-btn :style="currentPath === 'about' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('about')">{{ $t('nav.about') }}</v-btn>
+      <v-btn :style="currentPath === 'contact' ? 'color: #00c2cb' : 'color: #B5DACC'" text @click="goToPage('contact')">{{ $t('nav.contact') }}</v-btn>
       <v-menu open-on-hover offset-y>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
