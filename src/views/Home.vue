@@ -19,7 +19,8 @@
           </v-col>
         </v-row>
 
-<!--        FEATURED PROJECTS todo PROJECTS-->
+<!--        FEATURED PROJECTS todo FIND A WAY TO DO LOCALIZATION BASED ON BROWSER LANGUAGE-->
+
         <v-row class="mt-16 mb-16">
           <v-col
               cols="12" sm="12" md="6" lg="6" xl="6"

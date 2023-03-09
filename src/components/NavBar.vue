@@ -156,15 +156,17 @@ export default {
     changeLanguage(lang) {
       localStorage.setItem('lang', lang)
       this.lang = lang
-      this.$router.go(0)
+      this.$i18n.locale = lang
     },
   },
 
   mounted() {
     this.currentPath = localStorage.getItem('currentPath')
-    this.lang = localStorage.getItem('lang')
-    if (this.lang === '') {
+    if (localStorage.getItem('lang')) {
+      this.lang = localStorage.getItem('lang')
+    } else {
       this.lang = 'EN'
+      localStorage.setItem('lang', this.lang)
     }
   }
 };
